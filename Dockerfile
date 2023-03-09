@@ -18,6 +18,6 @@ COPY train.py ./train.py
 COPY inference.py ./inference.py
 
 RUN echo "$HOME"
-RUN python3 train.py && python3 inference.py
+RUN python3 train.py  && python3 inference.py
 ENTRYPOINT ["/bin/bash"]
 
