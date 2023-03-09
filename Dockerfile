@@ -1,10 +1,11 @@
-FROM alpine
+FROM python
 RUN mkdir webapp && mkdir my-model
 
 ENV MODEL_DIR=/webapp/my-model
 ENV MODEL_FILE_LDA=clf_lda.joblib
 ENV MODEL_FILE_NN=clf_nn.joblib
 ENV MODEL_FILE_RFC=clf_rfc.joblib
+RUN mkdir -p /webapp && mkdir /webapp/my-model
 WORKDIR /webapp
 COPY requirement.txt ./requirement.txt
 COPY Makefile ./Makefile
