@@ -10,14 +10,12 @@ RUN mkdir -p /webapp && mkdir /webapp/my-model
 WORKDIR /webapp
 COPY requirement.txt ./requirement.txt
 COPY Makefile ./Makefile
-# Installation of the dependecies
-RUN make install
-
 COPY train.csv ./train.csv
 COPY test.csv ./test.csv
-
 COPY train.py ./train.py
 COPY inference.py ./inference.py
+# Installation of the dependecies
+RUN make install
 # training is executed while creating the docker image and the trained models are stored in the my-model directory
 RUN python3 train.py  && python3 inference.py
 ENTRYPOINT ["/bin/bash"]
