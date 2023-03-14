@@ -10,4 +10,3 @@ Once coded,  Jenkins is used to pull this code, install the requirements and run
 ***train.py:** Python code to train ML models<br>
 ***inference.py:** Python file to predict the new cases<br> 
 ***inference_flask.py:** Flask app to wrap the working of inference.py<br>
-
