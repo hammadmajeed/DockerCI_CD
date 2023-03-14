@@ -17,6 +17,6 @@ COPY inference.py ./inference.py
 # Installation of the dependecies
 RUN make install
 # training is executed while creating the docker image and the trained models are stored in the my-model directory
-RUN python3 train.py  && python3 inference.py
+#RUN python3 train.py  && python3 inference.py
 ENTRYPOINT ["/bin/bash"]
 
