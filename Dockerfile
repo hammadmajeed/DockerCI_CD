@@ -1,4 +1,4 @@
-FROM python:3.10
+FROM python
 #creating working directories, final models will be stored in my-model 
 RUN mkdir webapp && mkdir my-model
 # Environment variables are set to make the installation/exuction robust. Code doesnt need to compiled after training new models.
